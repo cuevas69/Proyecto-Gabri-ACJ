@@ -1,6 +1,6 @@
 //File: controllers/pokemon.js
 var mongoose = require("mongoose");
-var TVShow = mongoose.model("Pokemon");
+var Pokemon = mongoose.model("Pokemon");
 
 //GET - Devuelve todos los pokemon DB
 exports.findAllPokemon = function (req, res) {
