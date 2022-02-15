@@ -7,8 +7,8 @@ var swaggerJsdoc = require('swagger-jsdoc');
 var swaggerUi = require('swagger-ui-express')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var gabriRouter = require('./routes/gabri')
+var objetosRouter = require('./routes/objetos');
+var pokemonRouter = require('./routes/pokemon')
 
 var app = express();
 
@@ -56,8 +56,8 @@ var options = {
 var swaggerSpecs = swaggerJsdoc(options);
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/gabri', gabriRouter)
+app.use('/objetos', objetosRouter);
+app.use('/pokemon', pokemonRouter)
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 module.exports = app;
