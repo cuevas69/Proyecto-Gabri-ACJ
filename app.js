@@ -8,7 +8,7 @@ var swaggerUi = require('swagger-ui-express')
 
 var indexRouter = require('./routes/index');
 var objetosRouter = require('./routes/objetos');
-var pokemonRouter = require('./routes/pokemon')
+var pokemonRouter = require('./routes/pokemons')
 
 var app = express();
 
