@@ -12,31 +12,6 @@ var pokemonRouter = require('./routes/pokemons')
 
 var app = express();
 
-mongoose.connect("mongodb://localhost/pokemon", function (err, res) {
-  if (err) {
-    console.log("ERROR: connecting to Database. " + err);
-  }
-  app.listen(3000, function () {
-    console.log("Node server running on http://localhost:3000");
-  });
-});
-
-// API routes
-var pokemon = express.Router();
-
-pokemon
-  .route("/pokemon")
-  .get(PokemonCtrl.findAllPokemons)
-  .post(PokemonCtrl.addPokemon);
-
-pokemon
-  .route("/pokemon/:id")
-  .get(PokemonCtrl.findByNombre)
-  .put(PokemonCtrl.updatePokemon)
-  .delete(PokemonCtrl.deletePokemon);
-
-app.use("/api", pokemon);
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
