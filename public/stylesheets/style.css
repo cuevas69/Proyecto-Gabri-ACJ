@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
-a {
-  color: #00B7FF;
+.titulo{
+  text-align: center;
+  margin-top: 2em;
+}
+
+.fotos{
+  text-align: center;
+}
+
+.flecha{
+  margin-bottom: 1em;
 }
